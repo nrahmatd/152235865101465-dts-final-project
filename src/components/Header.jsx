@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdAdd, MdLogout, MdShoppingBasket } from "react-icons/md";
+import { MdAdd, MdLogout } from "react-icons/md";
 import { motion } from "framer-motion";
 import Avatar from "assets/img/avatar.png";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ import { auth } from "firebase.config";
 import toast, { Toaster } from "react-hot-toast";
 
 const Header = () => {
-  const [{ user, cartShow, cartItems }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   const isAdmin =
     user?.email === "nrahmatd@gmail.com" || user?.email === "admin@gmail.com";

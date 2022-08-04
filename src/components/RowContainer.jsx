@@ -1,17 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useRef, useState } from "react";
-import { MdShoppingBasket } from "react-icons/md";
 import { motion } from "framer-motion";
-import { useStateValue } from "../context/StateProvider";
-import { actionType } from "../context/reducer";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { currencyFormatter } from "utils/currencyFormatter";
+import { Link, useNavigate } from "react-router-dom";
 
 const RowContainer = ({ flag, data, scrollValue }) => {
   const rowContainer = useRef();
   const navigate = useNavigate();
-
-  const [items, setItems] = useState([]);
 
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;

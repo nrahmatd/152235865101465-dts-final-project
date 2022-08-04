@@ -6,10 +6,9 @@ import {
 } from 'firebase/auth';
 import { app } from '../../firebase.config';
 import React, { useState } from 'react';
-import { TbBrandGoogle } from 'react-icons/tb';
 import { useStateValue } from 'context/StateProvider';
 import { actionType } from 'context/reducer';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import LoadingIcon from 'assets/icons/loading';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -23,22 +22,6 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-
-  const loginSocmed = async () => {
-    if (!user) {
-      await signInWithPopup(firebaseAuth, provider).then((res) => {
-        const { user } = res;
-        dispatch({
-          type: actionType.SET_USER,
-          user: user?.providerData[0],
-        });
-        localStorage.setItem('user', JSON.stringify(user?.providerData[0]));
-
-        navigate('/', { replace: true });
-      });
-    }
-    return;
-  };
 
   const loginWithCredentials = async (e) => {
     e.preventDefault();

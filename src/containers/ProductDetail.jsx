@@ -5,7 +5,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from 'firebase.config';
 import { getGameItemById } from 'utils/firebaseFunctions';
 import { useParams } from 'react-router-dom';
-import { currencyFormatter } from 'utils/currencyFormatter';
 import { Loader } from 'components';
 
 const ProductDetail = () => {

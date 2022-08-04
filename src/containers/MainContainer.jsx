@@ -3,7 +3,6 @@ import React from 'react';
 // import { motion } from 'framer-motion';
 // import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 // import RowContainer from '../components/RowContainer';
-import { useStateValue } from '../context/StateProvider';
 import MenuContainer from '../components/MenuContainer';
 import Banner from 'containers/Banner';
 
