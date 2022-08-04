@@ -1,7 +1,5 @@
 import {
   getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { app } from '../../firebase.config';
@@ -14,7 +12,6 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
   const firebaseAuth = getAuth(app);
-  const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
 
   const [{ user }, dispatch] = useStateValue();
