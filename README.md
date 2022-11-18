@@ -14,6 +14,9 @@ Contoh: `1512345678001-dts-final-project`
 
 Branch dapat sesuai dengan kebutuhan mandiri, namun hasil akhirnya harus di merge ke branch `main`.
 
+## Nomor Peserta
+152235865101465-dts-final-project
+
 ## Website
 https://catalog-games-2022.netlify.app
 
@@ -25,4 +28,7 @@ https://catalog-games-2022.netlify.app
 - List Games
 - Detail Game
 
-## Database Using Firebase
+## Database 
+- Using Firebase
+
+
